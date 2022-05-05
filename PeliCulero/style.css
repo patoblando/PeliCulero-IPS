@@ -1,4 +1,4 @@
-/*@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');*/
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
 
 :root{
   --indigo:#1b004b;
@@ -8,25 +8,24 @@
   --lila: #c9c9df;
   --magenta: #a80083;
   --amarilloanaranjado: #ff9800;
-  
 }
 
-@font-face {
-    font-family: 'varela_roundregular';
+/* @font-face {
+    font-family: 'Varela Round';
     src: url('./Fuente/Varela_Round/varelaround-regular-webfont.woff2') format('woff2'),
          url('./Fuente/Varela_Round/varelaround-regular-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
-}
+} */
 
 h1 {
-font-family: 'varela_roundregular';
-font-weight:normal;
-font-style:normal;
+  font-family: 'Varela Round', sans-serif;
+  font-weight:normal;
+  font-style:normal;
 }
 
 th, td, #titulo{
-  font-family: 'varela_roundregular';
+  font-family: 'Varela Round', sans-serif;
 }
 
 body{
@@ -58,8 +57,8 @@ body{
 
 #slider {
   width: 75%;
-  padding-left=4%;
-  padding-right=4%;
+  padding-left: 4%;
+  padding-right: 4%;
   display: inline-flex;
   flex-direction: row;
   align-items: center;
@@ -106,7 +105,7 @@ body{
 }
 
 p, a{
-	font-family: 'varela_roundregular';
+  font-family: 'Varela Round', sans-serif;
 	font-size: 1vw;
 	font-weight: bold;
 }
@@ -130,6 +129,9 @@ p, a{
 .w3-card-4 {
 	text-align: center;
 	margin: 2%;
+}
+.menu ul li a{
+  font-family: 'Varela Round', sans-serif;
 }
 
 .menu{
@@ -175,4 +177,13 @@ li a:hover {
   text-align: center;
   font-weight: 200;
   color: var(--amarilloanaranjado);
+}
+
+
+#slider div{
+  transition: all cubic-bezier(0.165, 0.84, 0.44, 1) 1s;
+}
+#slider div:hover{
+  transform: translateY(-20px) scale(1.05);
+  box-shadow: 10px 10px 40px rgba(255, 255, 255, 0.5);
 }
