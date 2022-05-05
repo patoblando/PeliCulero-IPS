@@ -1,0 +1,178 @@
+/*@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');*/
+
+:root{
+  --indigo:#1b004b;
+  --violeta: #4c007d;
+  --violeta-medio: #7f00b2;
+  --violeta-claro:#bc4ed8;
+  --lila: #c9c9df;
+  --magenta: #a80083;
+  --amarilloanaranjado: #ff9800;
+  
+}
+
+@font-face {
+    font-family: 'varela_roundregular';
+    src: url('./Fuente/Varela_Round/varelaround-regular-webfont.woff2') format('woff2'),
+         url('./Fuente/Varela_Round/varelaround-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+h1 {
+font-family: 'varela_roundregular';
+font-weight:normal;
+font-style:normal;
+}
+
+th, td, #titulo{
+  font-family: 'varela_roundregular';
+}
+
+body{
+  margin: 0;
+  min-height: 100vh;
+  background-color:black;
+}
+
+.header{
+	display: inline-flex;
+	width: 100%;
+	background-color: black;
+}
+
+.navbar{
+  width: 100%;
+  display: inline-flex;
+  flex-direction:row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar ul{
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+#slider {
+  width: 75%;
+  padding-left=4%;
+  padding-right=4%;
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.movieph{
+	width: 75%;
+	height: inherit;
+}
+
+#botonAleatorio:hover{
+	background-color: var(--violeta-medio)!important;
+	border-color:var(--violeta-medio) !important;
+	color: var(--lila) !important;
+}
+
+#botonMenu1:hover{
+	background-color:var(--violeta-medio)!important;
+	color: var(--lila) !important;
+}
+
+#botonMenu2:hover{
+	background-color:var(--violeta-claro)!important;
+	color: var(--lila) !important;
+}
+
+#botonAleatorio {
+	display: flex;
+	align-items: center;
+	width: 17%;
+	background-color:none;
+	color: var(--lila);
+	justify-content: center;	
+}
+
+.contenedor {
+	display: flex;
+	justify-content: center;
+}
+
+#sindeco {
+	text-decoration:none;
+}
+
+p, a{
+	font-family: 'varela_roundregular';
+	font-size: 1vw;
+	font-weight: bold;
+}
+
+.inSlider:hover {
+	background-image:none;
+	background-color:var(--violeta-claro) !important;
+	border-color:var(--violeta-claro) !important;
+	color: white !important;
+	
+}
+.inSlider {
+	width: 100%;
+    padding-top: 13%;
+	padding-bottom: 13%;
+	background-color:inherit;
+	background-image: url(./img/fondoEstrellado.webp);
+	text-align: center;
+}
+
+.w3-card-4 {
+	text-align: center;
+	margin: 2%;
+}
+
+.menu{
+	
+	margin: 2%;
+	padding: 2%;
+}
+
+#marca {
+	width: 15%;
+	padding-left:4%;
+}
+
+#logo{
+	width: 100%;
+}
+ 
+#logoa{
+	margin: 2%;
+}
+
+ul {
+  list-style-type: none;
+  overflow: hidden;
+}
+
+li {
+  display: inline-flex;
+}
+
+li a {
+  display: block;
+  color: var(--lila);
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: inherit;
+}
+
+
+#titulo{
+  text-align: center;
+  font-weight: 200;
+  color: var(--amarilloanaranjado);
+}
