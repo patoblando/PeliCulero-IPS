@@ -10,14 +10,6 @@
   --amarilloanaranjado: #ff9800;
 }
 
-/* @font-face {
-    font-family: 'Varela Round';
-    src: url('./Fuente/Varela_Round/varelaround-regular-webfont.woff2') format('woff2'),
-         url('./Fuente/Varela_Round/varelaround-regular-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-} */
-
 h1 {
   font-family: 'Varela Round', sans-serif;
   font-weight:normal;
@@ -34,115 +26,100 @@ body{
   background-color:black;
 }
 
-.header{
-	display: inline-flex;
-	width: 100%;
+header{
+	display: flex;
+	width: 80%;
+  margin: auto;
+  margin-bottom: 30px;
 	background-color: black;
-}
-
-.navbar{
-  width: 100%;
-  display: inline-flex;
   flex-direction:row;
   align-items: center;
   justify-content: space-between;
 }
 
-.navbar ul{
-  display: inline-flex;
+nav{
+  margin: 0;
+  padding: 0;
+}
+
+nav ul{
+  display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: flex-end;
 }
 
-#slider {
-  width: 75%;
-  padding-left: 4%;
-  padding-right: 4%;
-  display: inline-flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-}
-
-.movieph{
-	width: 75%;
-	height: inherit;
+.boton-nav{
+  transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 1s;
+  margin-left: 20px;
 }
 
 #botonAleatorio:hover{
-	background-color: var(--violeta-medio)!important;
+  background-color: var(--violeta-medio)!important;
 	border-color:var(--violeta-medio) !important;
 	color: var(--lila) !important;
 }
 
 #botonMenu1:hover{
-	background-color:var(--violeta-medio)!important;
+  background-color:var(--violeta-medio)!important;
 	color: var(--lila) !important;
 }
 
 #botonMenu2:hover{
-	background-color:var(--violeta-claro)!important;
+  background-color:var(--violeta-claro)!important;
 	color: var(--lila) !important;
 }
 
 #botonAleatorio {
-	display: flex;
-	align-items: center;
-	width: 17%;
-	background-color:none;
-	color: var(--lila);
-	justify-content: center;	
+  color: var(--lila);
 }
 
 .contenedor {
-	display: flex;
-	justify-content: center;
-}
-
-#sindeco {
-	text-decoration:none;
+  width: 75%;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
 }
 
 p, a{
   font-family: 'Varela Round', sans-serif;
-	font-size: 1vw;
+	font-size: 18px;
 	font-weight: bold;
+  text-decoration: none;
+}
+
+.inSlider {
+  width: 100%;
+  padding: 220px 0;
+  background-image: url(./img/fondoEstrellado.webp);
 }
 
 .inSlider:hover {
-	background-image:none;
-	background-color:var(--violeta-claro) !important;
-	border-color:var(--violeta-claro) !important;
-	color: white !important;
+	/* background-image:none; */
+	color: white!important;
+	background: var(--violeta-claro)!important;
+	border-color: var(--violeta-claro)!important;
 	
 }
-.inSlider {
-	width: 100%;
-    padding-top: 13%;
-	padding-bottom: 13%;
-	background-color:inherit;
-	background-image: url(./img/fondoEstrellado.webp);
+
+.boton {
 	text-align: center;
+	margin: 20px;
+  transition: all cubic-bezier(0.165, 0.84, 0.44, 1) 1s;
 }
 
-.w3-card-4 {
-	text-align: center;
-	margin: 2%;
-}
-.menu ul li a{
-  font-family: 'Varela Round', sans-serif;
+.boton:hover{
+  transform: translateY(-20px) scale(1.05);
+  box-shadow: 10px 0px 40px rgba(255, 255, 255, 0.5);
 }
 
-.menu{
-	
-	margin: 2%;
-	padding: 2%;
-}
+
+
 
 #marca {
 	width: 15%;
-	padding-left:4%;
 }
 
 #logo{
@@ -151,11 +128,6 @@ p, a{
  
 #logoa{
 	margin: 2%;
-}
-
-ul {
-  list-style-type: none;
-  overflow: hidden;
 }
 
 li {
@@ -168,22 +140,34 @@ li a {
   text-decoration: none;
 }
 
-li a:hover {
-  background-color: inherit;
-}
-
-
 #titulo{
   text-align: center;
   font-weight: 200;
   color: var(--amarilloanaranjado);
 }
 
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+  transition: 0.3s;
+}
 
-#slider div{
-  transition: all cubic-bezier(0.165, 0.84, 0.44, 1) 1s;
+/* Track */
+::-webkit-scrollbar-track {
+  background: rgba(0,0,0,0);
 }
-#slider div:hover{
-  transform: translateY(-20px) scale(1.05);
-  box-shadow: 10px 10px 40px rgba(255, 255, 255, 0.5);
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #4c007d;
+  border-radius: 5px;
+  -webkit-transition: background 1s;
+  transition: background 1s;
 }
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #bc4ed8;
+
+}
+
