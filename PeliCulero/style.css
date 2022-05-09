@@ -104,6 +104,11 @@ p, a{
 	
 }
 
+.inSlider p{
+  color: white!important;
+  background-color: #000!important;
+}
+
 .boton {
 	text-align: center;
 	margin: 20px;
@@ -161,8 +166,6 @@ li a {
 ::-webkit-scrollbar-thumb {
   background: #4c007d;
   border-radius: 5px;
-  -webkit-transition: background 1s;
-  transition: background 1s;
 }
 
 /* Handle on hover */
