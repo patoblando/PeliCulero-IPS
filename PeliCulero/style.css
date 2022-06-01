@@ -269,11 +269,11 @@ footer h2{
   #img-footer img{
     height: 150px;
     margin-bottom: 0px;
-    animation: latido 2s infinite;
+    /* animation: latido 2s infinite; */
   }
 }
-@keyframes latido{
+/* @keyframes latido{
   25%{
     transform: scale(1.2);
   }
-} 
+}  */
