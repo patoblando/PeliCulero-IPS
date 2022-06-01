@@ -8,6 +8,7 @@
   --lila: #c9c9df;
   --magenta: #a80083;
   --amarilloanaranjado: #ff9800;
+  --footer-shadow: 2px 2px 10px #e100ff;
 }
 
 @font-face {
@@ -99,22 +100,23 @@ p, a{
 
 .inSlider {
   width: 100%;
-  padding: 220px 0;
+  padding: 0;
   background-image: url(./img/fondoEstrellado.webp);
-  /* background: url(https://series-y-peliculas.com/wp-content/uploads/2021/01/romance.jpg) center; */
+  backdrop-filter: blur(100px);
+  backdrop-filter: saturate(180%) blur(2rem);
+
 }
 
 .inSlider:hover {
   /* background-image:none; */
 	color: white!important;
-    backdrop-filter: blur(20px);
-	/* background: var(--violeta-claro)!important; */
 	border-color: var(--violeta-claro)!important;
 }
 
 .inSlider p{
   color: white;
-  /* background-color: #000!important; */
+  padding: 220px 0;
+  margin: 0;
 }
 
 .boton {
@@ -186,7 +188,7 @@ footer{
   font-family: "neon";
   font-size: 20px;
   color: white;
-  text-shadow: 2px 2px 10px #e100ff;
+  text-shadow: var(--footer-shadow);
 }
 
 .top-footer{
@@ -224,11 +226,11 @@ footer h2{
 }
 
 #img-footer img{
-  background-color: white;
   padding: 0;
-  border-radius: 10000px;
-  border: none;
-  box-shadow: 2px 2px 15px #e100ff;
+  /* -webkit-filter: drop-shadow(5px 5px 5px rgb(230, 0, 0)); */
+  filter: drop-shadow(var(--footer-shadow)); 
+  margin-bottom: 10px;
+  height: 150px;
 }
 
 .social{
@@ -243,7 +245,7 @@ footer h2{
 }
 
 .social i:hover{
-  text-shadow: 2px 2px 15px #e100ff;
+  text-shadow: var(--footer-shadow);
   transform: scale(1.5);
   cursor: pointer;
 }
@@ -251,6 +253,27 @@ footer h2{
 .linea{
   height: 1px;
   background-color: rgba(255, 255, 255, 0.39);
-  width: 800px;
+  width: 80%;
   margin: auto;
 }
+
+.copy{
+  padding-bottom: 15px;
+}
+
+@media screen and (max-width: 900px) {
+  .top-footer{
+    display: flex;
+    flex-direction: column;
+  }
+  #img-footer img{
+    height: 150px;
+    margin-bottom: 0px;
+    animation: latido 2s infinite;
+  }
+}
+@keyframes latido{
+  25%{
+    transform: scale(1.2);
+  }
+} 
