@@ -20,6 +20,8 @@
 	
 	<script src="https://kit.fontawesome.com/3be31edc3b.js" crossorigin="anonymous"></script>
 
+	<script src="./main.js"></script>
+
     <title>PeliCulero</title>
     <link rel="stylesheet" href="./style.css">
 </head>
@@ -36,6 +38,10 @@
 				<li class = "w3-bar-item w3-button w3-round-large boton-nav" id="botonMenu1">
 					<a href="index.html">Mi lista</a>
 				</li>
+				<li class = "w3-bar-item w3-button w3-round-large boton-nav" id="botonMenu1">
+					<a onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</a>
+				</li>
+
 				<li class = "w3-bar-item w3-button w3-round-large boton-nav" id="botonMenu2">
 					<a href="pepe.html">Mi perfil</a>
 				</li>
@@ -78,8 +84,56 @@
 	</section>
 	<br><br><br><br><br><br><br><br>
 
-	<footer>
 
+	
+	<div id="id01" class="modal">
+		<form class="modal-content animate" action="/action_page.php" method="post">
+			<div style="position:relative;">
+				<span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+			</div>
+			<h2>Login</h2>
+			<div class="login-container">
+
+				<label for="">Nombre de usuario</label>
+				<input type="text" placeholder="Enter Username" name="uname" required>
+	
+				<label for="">Contraseña</label>
+				<input type="password" placeholder="Enter Password" name="psw" required>
+			
+				<div class="login-signup">
+					<input type="button" class="login-button login-btn" type="submit"  value="Ingresar">
+					<input type="button" class="login-button signup-btn" type="submit" value="Registrarse">
+				</div>
+
+				<label class="bottom-login">
+					<span>
+						<input type="checkbox" checked="checked" name="remember"> <span>Remember me</span>
+					</span>
+					<span>
+						<a href="#">¿Olvidaste tu contraseña?</a>
+					</span>
+				</label>
+
+				<!-- <div class="container-2" style="background-color:#f1f1f1">
+					  <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+				</div> -->
+			</div>
+	
+	  	</form>
+	</div>
+	
+
+
+
+
+
+	<footer>
+		<!-- <select name="cars" id="cars">
+			<option value="volvo">Volvo</option>
+			<option value="saab">Saab</option>
+			<option value="mercedes">Mercedes</option>
+			<option value="audi">Audi</option>
+		  </select> -->
 		<section class="top-footer">
 			<section id="img-footer">
 				<img src="./img/peliculero-circulo-blanco.png" alt="">
