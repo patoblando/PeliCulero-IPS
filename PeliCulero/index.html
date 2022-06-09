@@ -5,6 +5,10 @@
   <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- favicon -->
+	<link rel="icon" type="image/x-icon" href="./img/favicon.png">
+
     <!-- w3 -->
 	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-2019.css">
@@ -14,66 +18,190 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
 	
+	<script src="https://kit.fontawesome.com/3be31edc3b.js" crossorigin="anonymous"></script>
+
     <title>PeliCulero</title>
     <link rel="stylesheet" href="./style.css">
 </head>
 
 <body>
-	<div class="header">
-		<div class = "navbar">
-			<div id="marca">
-				<a id="logoa" target="_blank" href="index.html">
-					<img id="logo" src="./img/logo.webp">
-				</a>
-			</div>
-			<div class = "menu">
-				<ul>
-					<li class = "w3-bar-item w3-button w3-round-large" id="botonMenu1">
-						<a href="index.html">Mi lista</a>
-					</li>
-					<li class = "w3-bar-item w3-button w3-round-large" id="botonMenu2">
-						<a href="pepe.html">Mi perfil</a>
-					</li>
-				</ul>
-			</div>
+	<header class="header capainferior">
+		<div id="marca">
+			<a id="logoa" target="_blank" href="index.html">
+				<img id="logo" src="./img/logo.png">
+			</a>
 		</div>
-	</div>   
+		<nav>
+			<ul>
+				<li class = "w3-bar-item w3-button w3-round-large boton-nav" id="botonMenu1">
+					<a href="index.html">Mi lista</a>
+				</li>
+				<li class = "w3-bar-item w3-button w3-round-large boton-nav" id="botonMenu2">
+					<a href="pepe.html">Mi perfil</a>
+				</li>
+			</ul>
+		</nav>
+	</header>   
 	
-	<div class = "contenedor">
-		<div id = "slider">
-			<div class = "w3-card-4 w3-round-large w3-button w3-border boton inSlider">
-					<a id="sindeco" target="_blank" href="index.html">
-						<p>Romance</p>
-					</a>
+		<div class = "slide-contanier swiper capainferior">
+			<div class = "contenedor slide-content w3-round-large capainferior">
+				<div class = "swiper-wrapper">
+					<!--<div class = "swiper-slide w3-card-4 w3-round-large w3-button w3-border boton inSlider">-->
+					<div class = "swiper-slide w3-card-4 w3-round-large w3-border boton inSlider">
+						<div class = "card-content">
+							<a target="_blank" href="index.html">
+								<p>Romancea</p>
+							</a>
+						</div>
+					</div>
+					<div class = "swiper-slide w3-card-4 w3-round-large w3-border boton inSlider">
+						<div class = "card-content">
+							<a target="_blank" href="index.html">
+								<p>Romanceb</p>
+							</a>
+						</div>
+					</div>
+					<div class = "swiper-slide w3-card-4 w3-round-large w3-border  boton inSlider">
+						<div class = "card-content">
+							<a target="_blank" href="index.html">
+								<p>Romancec</p>
+							</a>
+						</div>
+					</div>				
+					<div class = "swiper-slide w3-card-4 w3-round-large w3-border  boton inSlider">
+						<div class = "card-content">
+							<a target="_blank" href="index.html">
+								<p>Romanced</p>
+							</a>
+						</div>
+					</div>
+					<div class = "swiper-slide w3-card-4 w3-round-large w3-border  boton inSlider">
+						<div class = "card-content">
+							<a target="_blank" href="index.html">
+								<p>Romancee</p>
+							</a>
+						</div>
+					</div>
+					<div class = "swiper-slide w3-card-4 w3-round-large w3-border  boton inSlider">
+						<div class = "card-content">
+							<a target="_blank" href="index.html">
+								<p>Romancef</p>
+							</a>
+						</div>
+					</div>
+					<div class = "swiper-slide w3-card-4 w3-round-large w3-border boton  inSlider">
+						<div class = "card-content">
+							<a target="_blank" href="index.html">
+								<p>Romanceg</p>
+							</a>
+						</div>
+					</div>
+					<div class = "swiper-slide w3-card-4 w3-round-large w3-border  boton inSlider">
+						<div class = "card-content">
+							<a target="_blank" href="index.html">
+								<p>Romanceh</p>
+							</a>
+						</div>
+					</div>
+					
+						<!-- 
+					<article class = "w3-card-4 w3-round-large w3-button w3-border boton inSlider swiper-slide">
+						<div class = "card-content">
+							<a target="_blank" href="index.html">
+								<p>Comedia</p>
+							</a>
+						</div>
+					</article>
+
+					<article class = "w3-card-4 w3-round-large w3-button w3-border boton inSlider swiper-slide">
+						<div class = "card-content">						
+							<a target="_blank" href="index.html">
+								<p>Comedia2</p>
+							</a>
+						</div>
+					</article>
+
+					<article class = "w3-card-4 w3-round-large w3-button w3-border boton inSlider swiper-slide">
+						<div class = "card-content">						
+							<a target="_blank" href="index.html">
+								<p>Comedia3</p>
+							</a>
+						</div>
+					</article>
+					
+					<article class = "w3-card-4 w3-round-large w3-button w3-border boton inSlider swiper-slide">
+						<div class = "card-content">						
+							<a target="_blank" href="index.html">
+								<p>Comedia4</p>
+							</a>
+						</div>
+					</article>		
+					<article class = "w3-card-4 w3-round-large w3-button w3-border boton inSlider swiper-slide">
+						<div class = "card-content">				
+							<a target="_blank" href="index.html" >
+								<p>Acción</p>
+							</a>
+						</div>
+					</article>
+					
+					<article class = "w3-card-4 w3-round-large w3-button w3-border boton inSlider swiper-slide">
+						<div class = "card-content">						
+							<a target="_blank" href="index.html">
+								<p>Aventura</p>
+							</a>
+						</div>
+					</article>
+					-->
+				</div>
 			</div>
 			
-			<div class = "w3-card-4 w3-round-large w3-button w3-border boton inSlider">
-					<a id="sindeco" target="_blank" href="index.html">
-						<p>Comedia</p>
-					</a>
-			</div>
+			<!--<div class="swiper-button-next swiper-navBtn"></div>
+			<div class="swiper-button-prev swiper-navBtn"></div>
+			<!--<div class="swiper-pagination"></div>*/-->
 			
-			<div class = "w3-card-4 w3-round-large w3-button w3-border boton inSlider">
-					<a id="sindeco" target="_blank" href="index.html" >
-						<p>Acción</p>
-					</a>
-			</div>
-			
-			<div class = "w3-card-4 w3-round-large w3-button w3-border boton inSlider">
-					<a id="sindeco" target="_blank" href="index.html">
-						<p>Aventura</p>
-					</a>
-			</div>
 		</div>
-	</div>
 	
-	<div class = "contenedor">
+	<section class = "contenedor capainferior">
 		<button class = "w3-card-4 w3-round-large w3-button w3-border boton" id="botonAleatorio">
-				<a id="sindeco" target="_blank" href="index.html">
+				<a target="_blank" href="index.html">
 					<p>Quiero una película aleatoria!</p>
 				</a>	
 		</button>
-	</div>
-</body>
+	</section>
+	<br><br><br><br><br><br><br><br>
 
+	<footer>
+
+		<section class="top-footer">
+			<section id="img-footer">
+				<img src="./img/peliculero-circulo-blanco.png" alt="">
+			</section>
+			<section>
+				<h3>Sobre nosotros</h3>
+				<p>Somos un grupo de alumnos de 6to informática del politécnico cursando la materia de schumi que no me acuerdo como se llama</p>
+			</section>
+			<section>
+				<h3>¿Qué es Peliculero?</h3>
+				<p>Es un sitio web para la recomendación de peliculas basada en tus gustos y experiencias</p>
+			</section>
+
+		</section>
+
+		<div class="linea"></div>
+		<section class="social">
+			<i class="fa-brands fa-instagram"></i>
+			<i class="fa-brands fa-youtube"></i>
+			<i class="fa-brands fa-twitch"></i>
+			<i class="fa-brands fa-github"></i>
+		</section>
+
+		<h2 class="copy">Copyrigth &#169 Peliculero 2022</h2>
+
+	</footer>
+
+</body>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+	<script src="./slider.js"></script>
+	
+	<link rel="stylesheet" href="https://unpkg.com/swiper@8.2.2/swiper-bundle.min.css">
 </html>
