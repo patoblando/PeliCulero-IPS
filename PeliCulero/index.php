@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html>
 
@@ -46,7 +50,7 @@
 						
 						echo '<li class = "w3-bar-item w3-button w3-round-large boton-nav logueade" id="botonMenu1"><a href="index.php">Mi lista</a></li>';
 						
-						echo '<li class = "w3-bar-item w3-button w3-round-large boton-nav logueade" id="botonMenu1 reg" action="logout.php"><a >Salir</a></li>';
+						echo '<li class = "w3-bar-item w3-button w3-round-large boton-nav logueade" id="botonMenu1 reg" action="logout.php"><a href="logout.php">Salir</a></li>';
 					}else{
 						echo '<li class = "w3-bar-item w3-button w3-round-large boton-nav sinloguear" id="botonMenu1 reg"><a onclick="document.getElementById(\'id01\').style.display=\'block\'" style="width:auto;" >Login</a></li>';
 
