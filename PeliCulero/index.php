@@ -30,7 +30,7 @@
 <body>
 	<header class="header">
 		<div id="marca">
-			<a id="logoa" target="_blank" href="index.html">
+			<a id="logoa" target="_blank" href="index.php">
 				<img id="logo" src="./img/logo.png">
 			</a>
 		</div>
@@ -40,7 +40,6 @@
 
 						echo'<li class = "w3-bar-item w3-button w3-round-large boton-nav sinloguear" id="botonMenu1 reg"> <a onclick="document.getElementById("id02").style.display="block" style="width:auto;">Sign up</a></li> ';-->
 				<?php
-					// Esto nunca muestra Mi perfil, Mi lista, ni Salir
 					if ( isset($_SESSION['username']) ){
 						echo '<li class = "w3-bar-item w3-button w3-round-large boton-nav logueade" id="botonMenu2"> <a href="pepe.html">Mi perfil</a> </li>';
 						
@@ -61,25 +60,25 @@
 	
 	<section class = "contenedor">
 		<article class = "w3-card-4 w3-round-large w3-button w3-border boton inSlider">
-				<a target="_blank" href="index.html">
+				<a target="_blank" href="#">
 					<p>Romance</p>
 				</a>
 		</article>
 		
 		<article class = "w3-card-4 w3-round-large w3-button w3-border boton inSlider">
-				<a target="_blank" href="index.html">
+				<a target="_blank" href="#">
 					<p>Comedia</p>
 				</a>
 		</article>
 		
 		<article class = "w3-card-4 w3-round-large w3-button w3-border boton inSlider">
-				<a target="_blank" href="index.html" >
+				<a target="_blank" href="#" >
 					<p>Acción</p>
 				</a>
 		</article>
 		
 		<article class = "w3-card-4 w3-round-large w3-button w3-border boton inSlider">
-				<a target="_blank" href="index.html">
+				<a target="_blank" href="#">
 					<p>Aventura</p>
 				</a>
 		</article>
@@ -87,7 +86,7 @@
 	
 	<section class = "contenedor">
 		<button class = "w3-card-4 w3-round-large w3-button w3-border boton" id="botonAleatorio">
-				<a target="_blank" href="index.html">
+				<a target="_blank" href="#">
 					<p>Quiero una película aleatoria!</p>
 				</a>	
 		</button>

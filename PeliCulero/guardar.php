@@ -10,7 +10,7 @@ else {
     $mysqli->query("insert into users (username, pass, email) values ('".$_POST['uname']."','".$_POST['psw']."','".$_POST['mail']."')"); 
     //$o = $mysqli->insert_id;
 }
-	header("Location: index.html");
+	header("Location: index.php");
 	exit();
 
 ?>
