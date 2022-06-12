@@ -24,9 +24,9 @@ session_start();
 	
 	<script src="https://kit.fontawesome.com/3be31edc3b.js" crossorigin="anonymous"></script>
 
-	<script src="./main.js"></script>
 	<script src="https://code.jquery.com/jquery-3.4.0.min.js"></script>
-    
+	<script src="./main.js"></script>    
+	
 	<title>PeliCulero</title>
     <link rel="stylesheet" href="./style.css">
 </head>
@@ -34,7 +34,7 @@ session_start();
 <body>
 	<header class="header">
 		<div id="marca">
-			<a id="logoa" target="_blank" href="index.php">
+			<a id="logoa" target="_blank" href="index.html">
 				<img id="logo" src="./img/logo.png">
 			</a>
 		</div>
@@ -44,13 +44,14 @@ session_start();
 
 						echo'<li class = "w3-bar-item w3-button w3-round-large boton-nav sinloguear" id="botonMenu1 reg"> <a onclick="document.getElementById("id02").style.display="block" style="width:auto;">Sign up</a></li> ';-->
 				<?php
+					// Esto nunca muestra Mi perfil, Mi lista, ni Salir
 					if ( isset($_SESSION['username']) ){
 						echo '<li class = "w3-bar-item w3-button w3-round-large boton-nav logueade" id="botonMenu2"> <a href="pepe.html">Mi perfil</a> </li>';
 						
 						echo '<li class = "w3-bar-item w3-button w3-round-large boton-nav logueade" id="botonMenu1"><a href="index.php">Mi lista</a></li>';
 						
 						echo '<li class = "w3-bar-item w3-button w3-round-large boton-nav logueade" id="botonMenu1 reg" action="logout.php"><a href="logout.php">Salir</a></li>';
-					}else{
+					} else {
 						echo '<li class = "w3-bar-item w3-button w3-round-large boton-nav sinloguear" id="botonMenu1 reg"><a onclick="document.getElementById(\'id01\').style.display=\'block\'" style="width:auto;" >Login</a></li>';
 
 						echo'<li class = "w3-bar-item w3-button w3-round-large boton-nav sinloguear" id="botonMenu1 reg"> <a onclick="document.getElementById(\'id02\').style.display=\'block\'" style="width:auto;">Sign up</a></li> ';
@@ -64,25 +65,25 @@ session_start();
 	
 	<section class = "contenedor">
 		<article class = "w3-card-4 w3-round-large w3-button w3-border boton inSlider">
-				<a target="_blank" href="#">
+				<a target="_blank" href="index.html">
 					<p>Romance</p>
 				</a>
 		</article>
 		
 		<article class = "w3-card-4 w3-round-large w3-button w3-border boton inSlider">
-				<a target="_blank" href="#">
+				<a target="_blank" href="index.html">
 					<p>Comedia</p>
 				</a>
 		</article>
 		
 		<article class = "w3-card-4 w3-round-large w3-button w3-border boton inSlider">
-				<a target="_blank" href="#" >
+				<a target="_blank" href="index.html" >
 					<p>Acción</p>
 				</a>
 		</article>
 		
 		<article class = "w3-card-4 w3-round-large w3-button w3-border boton inSlider">
-				<a target="_blank" href="#">
+				<a target="_blank" href="index.html">
 					<p>Aventura</p>
 				</a>
 		</article>
@@ -90,15 +91,15 @@ session_start();
 	
 	<section class = "contenedor">
 		<button class = "w3-card-4 w3-round-large w3-button w3-border boton" id="botonAleatorio">
-				<a target="_blank" href="#">
+				<a target="_blank" href="index.html">
 					<p>Quiero una película aleatoria!</p>
 				</a>	
 		</button>
 	</section>
 	<br><br><br><br><br><br><br><br>
 
-	<div id="id01" class="modal ver">
-		<form class="modal-content animate" action="login.php" method="post" id="registro">
+	<div id="id01" class="modal">
+		<form class="modal-content animate" action="login.php" method="post" id="iniciosesion">
 			<div style="position:relative;">
 				<span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
 			</div>
@@ -123,13 +124,10 @@ session_start();
 						<a href="#">¿Olvidaste tu contraseña?</a>
 					</span>
 				</label>
-
-				<span>
-					<a onclick="document.getElementById('id01').style.display='block'" style="width:auto;" class="w3-button login-boton">¿No tenés una cuenta? Registrate!</a>
-				</span>
-					
+				
+				<!--				
 				<div class="container-2" style="background-color:#f1f1f1">
-					  <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+					  <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>-->
 				</div>
 			</div>
 	
@@ -137,7 +135,7 @@ session_start();
 	</div>
 	
 	<div id="id02" class="modal ver">
-		<form class="modal-content animate" action="guardar.php" method="post" id="registro">
+		<form class="modal-content animate" action="guardar.php" method="post" id="registro"> <!----> 
 			<div style="position:relative;">
 				<span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
 			</div>
@@ -163,19 +161,35 @@ session_start();
 					<span>
 						<input type="checkbox" checked="checked" name="remember"> <span>Remember me</span>
 					</span>
-					<span>
-						<a href="#" class = "login-boton" >Iniciar sesión</a>
-					</span>
 				</label>
-
+				
+				<!--
 				<div class="container-2" style="background-color:#f1f1f1">
-					  <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn">Cancel</button>
+					  <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn"> Cancel</button>
+				</div>-->
+			</div>
+	
+	  	</form>
+	</div>
+	
+	<div id="id03" class="modal">
+		<form class="modal-content animate" action="verificar.php" method="post">
+			<div style="position:relative;">
+				<span onclick="document.getElementById('id03').style.display='none'" class="close" title="Close Modal">&times;</span>
+			</div>
+			<h2>Sign up</h2>
+			<div class="login-container">
+
+				<label for="">Código de verificación</label>
+				<input type="number" placeholder="Código de verificación" name="vcode" required>
+							
+				<div class="login-signup">
+					<input type="submit" class="login-button signup-btn" value="Enviar">
 				</div>
 			</div>
 	
 	  	</form>
 	</div>
-
 
 
 
@@ -213,6 +227,14 @@ session_start();
 
 	</footer>
 
+<script>
+var s = window.location.href;
+	console.log(s);
+	if( s.endsWith("verificar") ) {
+		var veri = document.getElementById('id03');
+		veri.style.display = "block";
+	}
+</script>
 </body>
 
 </html>

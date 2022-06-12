@@ -6,7 +6,6 @@ var data = new FormData(this);
          data: data,
          contentType: false,
          processData: false,
-         success: function(res) {
-          
+         success: function(res) { 
         }
     });

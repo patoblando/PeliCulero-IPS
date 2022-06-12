@@ -2,21 +2,24 @@
 
 //Para configurar todo usé este tutorial: https://www.milople.com/blogs/how-to-send-mail-from-localhost-xampp-using-gmail/
 //Igual no me anduvo :)
-function enviar_mail(){
-	$para  = ''; //remitente entre comillas
 
+function enviar_mail($destinatario){
 	// título
-	$título = '¡Gracias por registrarte en Peliculero!';
+	$título ='Gracias por registrarse en Peliculero!';
+
+	$codigo = rand(000001,999999);
 
 	// mensaje
 	$mensaje = '
 	<html>
 	<head>
-	  <title>Verifique su cuenta</title>
+		<meta charset="utf-8">
+		<title>Verifique su cuenta</title>
 	  
 	</head>
 	<body>
-		<a>Verificar sdfsdfdfsdfsf holaa</a>
+		<h2>Tu código de verificación es:</h2>
+		<h2>'.$codigo.'</h2>
 		
 	</body>
 	</html>
@@ -24,15 +27,12 @@ function enviar_mail(){
 
 	// Para enviar un correo HTML, debe establecerse la cabecera Content-type
 	$cabeceras  = 'MIME-Version: 1.0' . "\r\n";
-	$cabeceras .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
-	$cabeceras .= 'From: peliculero.noreply@gmail.com' . "\r\n";
+	$cabeceras .= 'Content-type: text/html; charset=utf-8' . "\r\n";
+	$cabeceras .= 'From: peliculero.noreply@yahoo.com' . "\r\n";
 	
 	// Enviarlo
-	$cabeceras = str_replace("\n.", "\n..", $cabeceras);
-	
-	mail($para, $título, $mensaje, $cabeceras);
-	
+	mail($destinatario, $título, $mensaje, $cabeceras);
+	return $codigo;
 }
 
-	enviar_mail();
 ?>
