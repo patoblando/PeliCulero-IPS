@@ -14,7 +14,7 @@
 
 @font-face {
   font-family: "neon";
-  src: url(./fonts/neon_80s/Neon.ttf);
+  src: url(../fonts/neon_80s/Neon.ttf);
 }
 
 h1 {
@@ -103,7 +103,7 @@ p, a{
 .inSlider {
   width: 100%;
   padding: 0;
-  background-image: url(./img/fondoEstrellado.webp);
+  background-image: url(../img/fondoEstrellado.webp);
   backdrop-filter: blur(100px);
   backdrop-filter: saturate(180%) blur(2rem);
 
@@ -289,7 +289,7 @@ footer h2{
 }
 
 /* Full-width input fields */
-input[type=text],input[type=password],input[type=button],input[type=email],input[type=number] {
+input[type=text],input[type=password],input[type=submit],input[type=email],input[type=number] {
   width: 100%;
   padding: 20px 20px;
   background-color: rgb(0, 0, 0);
@@ -308,12 +308,12 @@ input:focus{
   box-shadow: var(--shadow-1);
 }
 
-input[type=button]{
+/* input[type=submit]{
   width: 30%;
   margin: 0;
   margin-top: 50px;
   font-size: 18px;
-}
+} */
 
 .login-signup{
   width: 100%;
@@ -459,8 +459,8 @@ label{
     width: 90%;
   }
 
-  input[type=button]{
-    width: 40%;
+  input[type=submit]{
+    /* width: 40%; */
     margin-top: 40px;
     font-size: 15px;
   }

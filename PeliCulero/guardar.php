@@ -1,4 +1,5 @@
 <?php
+
 session_start();
 include "variables.inc";
 include "mail.php";
@@ -12,6 +13,7 @@ $mysqli = new mysqli($host, $user, $pass, $base);
 
 $res = $mysqli->query("select id from users where username ='".$_POST['username']."'");
 $res2 = $mysqli->query("select id from users where email ='".$_POST['email']."'");
+
 if($res->num_rows || $res2->num_rows)
   echo -1;
 else {

@@ -28,7 +28,7 @@ session_start();
 	<script src="./main.js"></script>    
 	
 	<title>PeliCulero</title>
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./styles/main.css">
 </head>
 
 <body>
@@ -75,7 +75,7 @@ session_start();
 					<p>Comedia</p>
 				</a>
 		</article>
-		
+
 		<article class = "w3-card-4 w3-round-large w3-button w3-border boton inSlider">
 				<a target="_blank" href="index.html" >
 					<p>Acción</p>
@@ -154,14 +154,9 @@ session_start();
 				<!-- Hacer otro campo que pida que ponga de nuevo la pass y que se fije que coincidan -->
 			
 				<div class="login-signup">
-					<input type="submit" class="login-button signup-btn" value="Registrarme" id="registrarse">
+					<input type="submit" class="login-button login-btn" value="Registrarme" id="registrarse">
 				</div>
 
-				<label class="bottom-login">
-					<span>
-						<input type="checkbox" checked="checked" name="remember"> <span>Remember me</span>
-					</span>
-				</label>
 				
 				<!--
 				<div class="container-2" style="background-color:#f1f1f1">
@@ -187,7 +182,6 @@ session_start();
 					<input type="submit" class="login-button signup-btn" value="Enviar">
 				</div>
 			</div>
-	
 	  	</form>
 	</div>
 
