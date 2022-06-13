@@ -3,6 +3,7 @@
 session_start();
 include "variables.inc";
 include "mail.php";
+include "mcript.php";
 
 $mysqli = new mysqli($host, $user, $pass, $base);
 
@@ -11,8 +12,13 @@ $mysqli = new mysqli($host, $user, $pass, $base);
 //Y este capaz les sirve para ver en dónde hay que cambiar todos esos campos que dice el anterior link 
 //https://www.milople.com/blogs/how-to-send-mail-from-localhost-xampp-using-gmail/
 
-$res = $mysqli->query("select id from users where username ='".$_POST['username']."'");
-$res2 = $mysqli->query("select id from users where email ='".$_POST['email']."'");
+$username = $_POST['uname'];
+$password = $encriptar($_POST['psw']);
+$email = $_POST['mail'];
+
+$res = $mysqli->query("select id from users where username ='".$username."'");
+$res2 = $mysqli->query("select id from users where email ='".$email."'");
+
 
 if($res->num_rows || $res2->num_rows)
   echo -1;
@@ -20,10 +26,10 @@ else {
 	// TODO: Sanitizar inputs para evitar inyecciones
 	// TODO: no permitir que se registren dos mails o usernames iguales.
 	
-    $mysqli->query("insert into users (username, pass, email) values ('".$_POST['uname']."','".$_POST['psw']."','".$_POST['mail']."')"); 
+    $mysqli->query("insert into users (username, pass, email) values ('".$username."','".$password."','".$email."')"); 
     //$o = $mysqli->insert_id;
-	$_SESSION['vcode'] = enviar_mail($_POST['mail']);
-	$_SESSION['id'] = ($mysqli->query("select id from users where username ='".$_POST['uname']."' and email ='".$_POST['mail']."'" ));
+	$_SESSION['vcode'] = enviar_mail($email);
+	$_SESSION['id'] = ($mysqli->query("select id from users where username ='".$username."' and email ='".$email."'" ));
 	
 }
 	header("Location: index.php?verificar");
