@@ -17,22 +17,9 @@
   src: url(../fonts/neon_80s/Neon.ttf);
 }
 
-h1 {
-  font-family: 'Varela Round', sans-serif;
-  font-weight:normal;
-  font-style:normal;
-}
-
-th, td, #titulo{
-  font-family: 'Varela Round', sans-serif;
-}
-
 body{
   margin: 0;
   min-height: 100vh;
-  /* background-color:black; */
-  /* background: rgb(45, 33, 53); */
-  /* background: linear-gradient(171deg, rgba(0,0,0,1) 30%, rgba(0,175,189,1) 100%); */
   background: linear-gradient(171deg, rgba(0,0,0,1) 30%, rgb(58, 1, 85) 100%);
 }
 
@@ -41,8 +28,7 @@ header{
 	width: 80%;
   margin: auto;
   margin-bottom: 30px;
-	/* background-color: black; */
-  flex-direction:row;
+  flex-direction: row;
   align-items: center;
   justify-content: space-between;
 }
@@ -94,7 +80,7 @@ nav ul{
 }
 
 p, a{
-  font-family: 'Varela Round', sans-serif;
+  font-family: 'neon';
 	font-size: 18px;
 	font-weight: bold;
   text-decoration: none;
