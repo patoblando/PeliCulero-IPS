@@ -9,5 +9,4 @@ if(isset($_SESSION['vcode'])){
 	}
 }
 	header("Location: logout.php");
-exit();
 ?>

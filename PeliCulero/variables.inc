@@ -1,6 +1,6 @@
 <?php
-    $user='root';
-    $host='localhost';
-    $pass='';
-    $base='peliculero';
+$user='euge';
+$host='localhost';
+$pass='';
+$base='base_prueba';
 ?>

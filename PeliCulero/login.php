@@ -35,7 +35,7 @@ if (isset($_POST['uname']) && isset($_POST['psw'])) {
 
         if ($result->num_rows === 1) {
             $row = mysqli_fetch_assoc($result);
-            if ($row['username'] === $uname && $row['pass'] === $pass  && $row['active'] === 1) {
+            if ($row['username'] === $uname && $row['pass'] === $pass && $row['active'] === 1) {
                 echo "Logged in!";
                 $_SESSION['username'] = $row['username'];
                 $_SESSION['email'] = $row['email'];

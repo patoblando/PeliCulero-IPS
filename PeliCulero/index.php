@@ -1,6 +1,5 @@
 <?php
 session_start();
-
 ?>
 
 <!DOCTYPE html>
@@ -29,7 +28,7 @@ session_start();
 	<script src="./main.js"></script>    
 	
 	<title>PeliCulero</title>
-    <link rel="stylesheet" href="./styles/main.css">
+    <link rel="stylesheet" href="./style.css">
 </head>
 
 <body>
@@ -76,7 +75,7 @@ session_start();
 					<p>Comedia</p>
 				</a>
 		</article>
-
+		
 		<article class = "w3-card-4 w3-round-large w3-button w3-border boton inSlider">
 				<a target="_blank" href="index.html" >
 					<p>Acción</p>
@@ -114,18 +113,17 @@ session_start();
 				<input type="password" placeholder="Enter Password" name="psw" required>
 			
 				<div class="login-signup">
-					<!-- <input type="submit" class="login-button login-btn" value="Ingresar" id="registro_enviar"> -->
-					<button type="submit" class="login-button login-btn" id="registro_enviar">Ingresar</button>
+					<input type="submit" class="login-button login-btn" value="Ingresar" id="registro_enviar">
 				</div>
 
-				<div class="bottom-login">
+				<label class="bottom-login">
 					<span>
 						<input type="checkbox" checked="checked" name="remember"> <span>Remember me</span>
 					</span>
 					<span>
 						<a href="#">¿Olvidaste tu contraseña?</a>
 					</span>
-				</div>
+				</label>
 				
 				<!--				
 				<div class="container-2" style="background-color:#f1f1f1">
@@ -136,9 +134,8 @@ session_start();
 	  	</form>
 	</div>
 	
-	
 	<div id="id02" class="modal ver">
-		<form class="modal-content animate" action="guardar.php" method="post" id="registro">
+		<form class="modal-content animate" action="guardar.php" method="post" id="registro"> <!----> 
 			<div style="position:relative;">
 				<span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
 			</div>
@@ -157,10 +154,14 @@ session_start();
 				<!-- Hacer otro campo que pida que ponga de nuevo la pass y que se fije que coincidan -->
 			
 				<div class="login-signup">
-					<!-- <input type="submit" class="login-button login-btn" value="Registrarme" id="registrarse"> -->
-					<button type="submit" class="login-button login-btn" id="registrarse">Registrarme</button>
+					<input type="submit" class="login-button signup-btn" value="Registrarme" id="registrarse">
 				</div>
 
+				<label class="bottom-login">
+					<span>
+						<input type="checkbox" checked="checked" name="remember"> <span>Remember me</span>
+					</span>
+				</label>
 				
 				<!--
 				<div class="container-2" style="background-color:#f1f1f1">
@@ -176,17 +177,17 @@ session_start();
 			<div style="position:relative;">
 				<span onclick="document.getElementById('id03').style.display='none'" class="close" title="Close Modal">&times;</span>
 			</div>
-			<h2>Sign up</h2>
+			<h2>Verificar</h2>
 			<div class="login-container">
 
-				<label for="">Ingrese el código de verificación enviado a su correo</label>
+				<label for="">Código de verificación</label>
 				<input type="number" placeholder="Código de verificación" name="vcode" required>
 							
 				<div class="login-signup">
-					<!-- <input type="submit" class="login-button signup-btn" value="Enviar"> -->
-					<button type="submit" class="login-button signup-btn"> Enviar </button>
+					<input type="submit" class="login-button signup-btn" value="Enviar">
 				</div>
 			</div>
+	
 	  	</form>
 	</div>
 
@@ -223,9 +224,7 @@ session_start();
 		</section>
 
 		<h2 class="copy">Copyrigth &#169 Peliculero 2022</h2>
-		<?php
-			echo $_GET['balta'];
-		?>
+
 	</footer>
 
 <script>

@@ -1,13 +1,13 @@
 	
 	$(document).ready(function () {
-	/*
-		$(".registrarse").click(function() {
-			$(".ver").hide();
-			$("#id03").show("slow");
+		/*
+		$(".signup-btn").click(function() {
+        $(".ver").hide();
+        $("#id03").show("slow");
 		});
 				
 		$("#registro").submit(function(e) {
-			// e.preventDefault();
+			e.preventDefault();
 			var data = new FormData(this);
 			$.ajax({
 				url: 'guardar.php',
@@ -36,7 +36,7 @@
 		});
 		
 	});
-	*/
+*/
 
 	// Get the modal
 	var modal = document.getElementById('id01');
