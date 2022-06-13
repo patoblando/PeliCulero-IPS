@@ -46,7 +46,7 @@ session_start();
 						echo'<li class = "w3-bar-item w3-button w3-round-large boton-nav sinloguear" id="botonMenu1 reg"> <a onclick="document.getElementById("id02").style.display="block" style="width:auto;">Sign up</a></li> ';-->
 				<?php
 					// Esto nunca muestra Mi perfil, Mi lista, ni Salir
-					if ( isset($_SESSION['username']) ){
+					if ( isset($_SESSION['uid']) ){
 						echo '<li class = "w3-bar-item w3-button w3-round-large boton-nav logueade" id="botonMenu2"> <a href="pepe.html">Mi perfil</a> </li>';
 						
 						echo '<li class = "w3-bar-item w3-button w3-round-large boton-nav logueade" id="botonMenu1"><a href="index.php">Mi lista</a></li>';
@@ -136,8 +136,9 @@ session_start();
 	  	</form>
 	</div>
 	
+	
 	<div id="id02" class="modal ver">
-		<form class="modal-content animate" action="guardar.php" method="post" id="registro"> <!----> 
+		<form class="modal-content animate" action="guardar.php" method="post" id="registro">
 			<div style="position:relative;">
 				<span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
 			</div>
@@ -178,7 +179,7 @@ session_start();
 			<h2>Sign up</h2>
 			<div class="login-container">
 
-				<label for="">Código de verificación</label>
+				<label for="">Ingrese el código de verificación enviado a su correo</label>
 				<input type="number" placeholder="Código de verificación" name="vcode" required>
 							
 				<div class="login-signup">

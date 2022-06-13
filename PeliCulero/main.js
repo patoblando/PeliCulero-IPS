@@ -1,6 +1,6 @@
 	
 	$(document).ready(function () {
-		
+	/*
 		$(".registrarse").click(function() {
 			$(".ver").hide();
 			$("#id03").show("slow");
@@ -36,7 +36,7 @@
 		});
 		
 	});
-
+	*/
 
 	// Get the modal
 	var modal = document.getElementById('id01');
