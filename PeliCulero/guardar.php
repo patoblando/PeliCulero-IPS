@@ -12,9 +12,9 @@ $mysqli = new mysqli($host, $user, $pass, $base);
 //Y este capaz les sirve para ver en dónde hay que cambiar todos esos campos que dice el anterior link 
 //https://www.milople.com/blogs/how-to-send-mail-from-localhost-xampp-using-gmail/
 
-$username = $_POST['uname'];
+$username = filter_var($_POST['uname'], FILTER_SANITIZE_STRING);
 $password = $encriptar($_POST['psw']);
-$email = $_POST['mail'];
+$email = filter_var($_POST['mail'], FILTER_SANITIZE_EMAIL);
 
 $res = $mysqli->query("select id from users where username ='".$username."'");
 $res2 = $mysqli->query("select id from users where email ='".$email."'");

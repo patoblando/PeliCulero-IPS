@@ -275,7 +275,7 @@ footer h2{
 }
 
 /* Full-width input fields */
-input[type=text],input[type=password],input[type=submit],input[type=email],input[type=number] {
+input[type=text],input[type=password],button[type=submit],input[type=email],input[type=number] {
   width: 100%;
   padding: 20px 20px;
   background-color: rgb(0, 0, 0);

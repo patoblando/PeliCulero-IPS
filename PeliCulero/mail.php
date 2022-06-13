@@ -4,8 +4,8 @@
 //Igual no me anduvo :)
 
 function enviar_mail($destinatario){
-	// título
-	$título ='Gracias por registrarse en Peliculero!';
+	// titulo
+	$titulo ='Gracias por registrarse en Peliculero!';
 
 	$codigo = rand(000001,999999);
 
@@ -26,13 +26,16 @@ function enviar_mail($destinatario){
 	';
 
 	// Para enviar un correo HTML, debe establecerse la cabecera Content-type
+	// $cabeceras  = 'MIME-Version: 1.0' . "\r\n";
 	$cabeceras  = 'MIME-Version: 1.0' . "\r\n";
 	$cabeceras .= 'Content-type: text/html; charset=utf-8' . "\r\n";
-	$cabeceras .= 'From: peliculero.noreply@yahoo.com' . "\r\n";
+	// $cabeceras .= 'From: peliculero.noreply@yahoo.com' . "\r\n";
 	
 	// Enviarlo
-	mail($destinatario, $título, $mensaje, $cabeceras);
-	return $codigo;
+	if(mail($destinatario, $titulo, $mensaje, $cabeceras))
+		return $codigo;
+
+	return -1;
 }
 
 ?>

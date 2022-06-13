@@ -1,5 +1,6 @@
 <?php
 session_start();
+
 ?>
 
 <!DOCTYPE html>
@@ -113,17 +114,18 @@ session_start();
 				<input type="password" placeholder="Enter Password" name="psw" required>
 			
 				<div class="login-signup">
-					<input type="submit" class="login-button login-btn" value="Ingresar" id="registro_enviar">
+					<!-- <input type="submit" class="login-button login-btn" value="Ingresar" id="registro_enviar"> -->
+					<button type="submit" class="login-button login-btn" id="registro_enviar">Ingresar</button>
 				</div>
 
-				<label class="bottom-login">
+				<div class="bottom-login">
 					<span>
 						<input type="checkbox" checked="checked" name="remember"> <span>Remember me</span>
 					</span>
 					<span>
 						<a href="#">¿Olvidaste tu contraseña?</a>
 					</span>
-				</label>
+				</div>
 				
 				<!--				
 				<div class="container-2" style="background-color:#f1f1f1">
@@ -154,7 +156,8 @@ session_start();
 				<!-- Hacer otro campo que pida que ponga de nuevo la pass y que se fije que coincidan -->
 			
 				<div class="login-signup">
-					<input type="submit" class="login-button login-btn" value="Registrarme" id="registrarse">
+					<!-- <input type="submit" class="login-button login-btn" value="Registrarme" id="registrarse"> -->
+					<button type="submit" class="login-button login-btn" id="registrarse">Registrarme</button>
 				</div>
 
 				
@@ -179,7 +182,8 @@ session_start();
 				<input type="number" placeholder="Código de verificación" name="vcode" required>
 							
 				<div class="login-signup">
-					<input type="submit" class="login-button signup-btn" value="Enviar">
+					<!-- <input type="submit" class="login-button signup-btn" value="Enviar"> -->
+					<button type="submit" class="login-button signup-btn"> Enviar </button>
 				</div>
 			</div>
 	  	</form>
@@ -218,7 +222,9 @@ session_start();
 		</section>
 
 		<h2 class="copy">Copyrigth &#169 Peliculero 2022</h2>
-
+		<?php
+			echo $_GET['balta'];
+		?>
 	</footer>
 
 <script>
