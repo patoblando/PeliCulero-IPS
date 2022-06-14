@@ -26,7 +26,7 @@ session_start();
 	<script src="https://kit.fontawesome.com/3be31edc3b.js" crossorigin="anonymous"></script>
 
 	<script src="https://code.jquery.com/jquery-3.4.0.min.js"></script>
-	<script src="./main.js"></script>    
+	<script src="./js/main.js"></script>    
 	
 	<title>PeliCulero</title>
     <link rel="stylesheet" href="./styles/variables.css">
