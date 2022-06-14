@@ -3,6 +3,7 @@
 session_start(); 
 
 include "variables.inc";
+include "mcript.php";
 
 $mysqli = new mysqli($host, $user, $pass, $base);
 
@@ -18,7 +19,7 @@ if (isset($_POST['uname']) && isset($_POST['psw'])) {
     }
 
     $uname = validate($_POST['uname']);
-    $pass = validate($_POST['psw']);
+    $pass = validate(desencriptar($_POST['psw']));
 
     if (empty($uname)) {
         header("Location: index.php?error=User Name is required");
