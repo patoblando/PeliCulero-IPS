@@ -10,7 +10,7 @@
 			// e.preventDefault();
 			var data = new FormData(this);
 			$.ajax({
-				url: 'guardar.php',
+				url: 'API/signup.php',
 				type: 'POST',
 				data: data,
 				contentType: false,
@@ -27,7 +27,7 @@
 			e.preventDefault();
 			var data = new FormData(this);
 			$.ajax({
-				url: 'login.php',
+				url: 'API/login.php',
 				type: 'POST',
 				data: data,
 				contentType: false,

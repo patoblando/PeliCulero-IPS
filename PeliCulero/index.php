@@ -51,7 +51,7 @@ session_start();
 						
 						echo '<li class = "w3-bar-item w3-button w3-round-large boton-nav logueade" id="botonMenu1"><a href="index.php">Mi lista</a></li>';
 						
-						echo '<li class = "w3-bar-item w3-button w3-round-large boton-nav logueade" id="botonMenu1 reg" action="logout.php"><a href="logout.php">Salir</a></li>';
+						echo '<li class = "w3-bar-item w3-button w3-round-large boton-nav logueade" id="botonMenu1 reg" action="API/logout.php"><a href="API/logout.php">Salir</a></li>';
 					} else {
 						echo '<li class = "w3-bar-item w3-button w3-round-large boton-nav sinloguear" id="botonMenu1 reg"><a onclick="document.getElementById(\'id01\').style.display=\'block\'" style="width:auto;" >Login</a></li>';
 
@@ -100,7 +100,7 @@ session_start();
 	<br><br><br><br><br><br><br><br>
 
 	<div id="id01" class="modal">
-		<form class="modal-content animate" action="login.php" method="post" id="iniciosesion">
+		<form class="modal-content animate" action="API/login.php" method="post" id="iniciosesion">
 			<div style="position:relative;">
 				<span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
 			</div>
@@ -137,7 +137,7 @@ session_start();
 	</div>
 	
 	<div id="id02" class="modal ver">
-		<form class="modal-content animate" action="guardar.php" method="post" id="registro"> <!----> 
+		<form class="modal-content animate" action="API/signup.php" method="post" id="registro"> <!----> 
 			<div style="position:relative;">
 				<span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
 			</div>
@@ -171,7 +171,7 @@ session_start();
 	</div>
 	
 	<div id="id03" class="modal">
-		<form class="modal-content animate" action="verificar.php" method="post">
+		<form class="modal-content animate" action="API/verificar.php" method="post">
 			<div style="position:relative;">
 				<span onclick="document.getElementById('id03').style.display='none'" class="close" title="Close Modal">&times;</span>
 			</div>
@@ -220,11 +220,7 @@ session_start();
 			<i class="fa-brands fa-twitch"></i>
 			<i class="fa-brands fa-github"></i>
 		</section>
-
 		<h2 class="copy">Copyrigth &#169 Peliculero 2022</h2>
-		<?php
-			echo $_GET['balta'];
-		?>
 	</footer>
 
 <script>

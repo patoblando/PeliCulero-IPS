@@ -16,8 +16,8 @@ $username = filter_var($_POST['uname'], FILTER_SANITIZE_STRING);
 $password = $encriptar($_POST['psw']);
 $email = filter_var($_POST['mail'], FILTER_SANITIZE_EMAIL);
 
-$res = $mysqli->query("select id from users where username ='".$username."'");
-$res2 = $mysqli->query("select id from users where email ='".$email."'");
+$res = $mysqli->query("SELECT id from users where username ='".$username."'");
+$res2 = $mysqli->query("SELECT id from users where email ='".$email."'");
 
 
 if($res->num_rows || $res2->num_rows)
@@ -29,10 +29,12 @@ else {
     $mysqli->query("insert into users (username, pass, email) values ('".$username."','".$password."','".$email."')"); 
     //$o = $mysqli->insert_id;
 	$_SESSION['vcode'] = enviar_mail($email);
-	$_SESSION['id'] = ($mysqli->query("select id from users where username ='".$username."' and email ='".$email."'" ));
-	
+	// $_SESSION['id'] = $mysqli->query("SELECT id from users where username ='".$username."' and email ='".$email."'" ));
+	$aux = $mysqli->query("SELECT id from users where username ='".$username."'");
+	$aux = $aux->fetch_array(MYSQLI_ASSOC);
+	$_SESSION['id'] = $aux['id'];
 }
-	header("Location: index.php?verificar");
+	header("Location: ../index.php?verificar");
 	exit();
 
 ?>
