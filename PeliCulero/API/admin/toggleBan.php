@@ -1,4 +1,11 @@
 <?php
+
+session_start();
+
+if($_SESSION['username'] != 'admin'){
+    die("504");
+}
+
 include "../../API/variables.inc";
 
 $mysqli = new mysqli($host, $user, $pass, $base);

@@ -15,6 +15,10 @@
 					
 					echo '<li class = "w3-bar-item w3-button w3-round-large boton-nav logueade botonMenu1"><a href="index.php">Mi lista</a></li>';
 					
+					if($_SESSION['username'] == 'admin'){
+						echo '<li class = "w3-bar-item w3-button w3-round-large boton-nav sinloguear botonMenu1 reg"><a onclick="toggleAdmin()">Admin</a></li>';
+					}
+
 					echo '<li class = "w3-bar-item w3-button w3-round-large boton-nav logueade botonMenu1 reg" href="API/logout.php"><a href="API/logout.php">Salir</a></li>';
 				} else {
 					echo '<li class = "w3-bar-item w3-button w3-round-large boton-nav sinloguear botonMenu1 reg"><a onclick="document.getElementById(\'id01\').style.display=\'block\'" style="width:auto;" >Login</a></li>';

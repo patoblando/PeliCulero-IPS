@@ -1,4 +1,10 @@
 <?php
+session_start();
+
+if($_SESSION['username'] != 'admin'){
+    die("504");
+}
+
 include "../../API/variables.inc";
 
 $mysqli = new mysqli($host, $user, $pass, $base);
@@ -12,7 +18,9 @@ $info = $mysqli->query("SELECT id, username, active, ban from users");
 
 $response = [];
 while($row = $info->fetch_array(MYSQLI_ASSOC)){
-    $response[] = $row;
+    if($row['username'] != 'admin'){
+        $response[] = $row;
+    }
 }
 
 echo json_encode($response);

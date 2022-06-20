@@ -31,6 +31,7 @@ session_start();
 	<title>PeliCulero</title>
     <link rel="stylesheet" href="./styles/variables.css">
     <link rel="stylesheet" href="./styles/header.css">
+    <link rel="stylesheet" href="./styles/admin.css">
     <link rel="stylesheet" href="./styles/main.css">
     <link rel="stylesheet" href="./styles/footer.css">
 </head>
@@ -39,6 +40,8 @@ session_start();
 
 	<?php include "components/header.php" ?>
 	
+	<?php if(isset($_SESSION['username'])) if($_SESSION['username'] == 'admin') include "components/admin.php" ?>
+
 	<?php include "components/cards.php" ?>
 	
 
@@ -145,6 +148,7 @@ var s = window.location.href;
 		veri.style.display = "block";
 	}
 </script>
+<script src="./js/admin.js"></script>
 </body>
 
 </html>

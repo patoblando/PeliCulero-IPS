@@ -42,6 +42,7 @@
 	var modal = document.getElementById('id01');
 	var modal2 = document.getElementById('id02');
 	var modal3 = document.getElementById('id03');
+	var banForm = document.getElementById('ban-form');
 
 	
 	// When the user clicks anywhere outside of the modal, close it
@@ -55,4 +56,9 @@
 		if(event.target == modal3){
 			modal3.style.display = "none";
 		}		
+		if(event.target == banForm){
+			banForm.style.display = "none";
+		}		
 	}
+
+	
