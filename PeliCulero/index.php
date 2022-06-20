@@ -39,39 +39,9 @@ session_start();
 
 	<?php include "components/header.php" ?>
 	
-	<section class = "contenedor">
-		<article class = "w3-card-4 w3-round-large w3-button w3-border boton inSlider">
-				<a target="_blank" href="index.html">
-					<p>Romance</p>
-				</a>
-		</article>
-		
-		<article class = "w3-card-4 w3-round-large w3-button w3-border boton inSlider">
-				<a target="_blank" href="index.html">
-					<p>Comedia</p>
-				</a>
-		</article>
-
-		<article class = "w3-card-4 w3-round-large w3-button w3-border boton inSlider">
-				<a target="_blank" href="index.html" >
-					<p>Acción</p>
-				</a>
-		</article>
-		
-		<article class = "w3-card-4 w3-round-large w3-button w3-border boton inSlider">
-				<a target="_blank" href="index.html">
-					<p>Aventura</p>
-				</a>
-		</article>
-	</section>
+	<?php include "components/cards.php" ?>
 	
-	<section class = "contenedor">
-		<button class = "w3-card-4 w3-round-large w3-button w3-border boton" id="botonAleatorio">
-				<a target="_blank" href="index.html">
-					<p>Quiero una película aleatoria!</p>
-				</a>	
-		</button>
-	</section>
+
 	<br><br><br><br><br><br><br><br>
 
 	<div id="id01" class="modal">
@@ -89,7 +59,6 @@ session_start();
 				<input type="password" placeholder="Enter Password" name="psw" required>
 			
 				<div class="login-signup">
-					<!-- <input type="submit" class="login-button login-btn" value="Ingresar" id="registro_enviar"> -->
 					<button type="submit" class="login-button login-btn" id="registro_enviar">Ingresar</button>
 				</div>
 

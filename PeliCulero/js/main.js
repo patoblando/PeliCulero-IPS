@@ -24,7 +24,7 @@
 		});
 	 
 		$("#iniciosesion").submit(function(e) {
-			e.preventDefault();
+			// e.preventDefault();
 			var data = new FormData(this);
 			$.ajax({
 				url: 'API/login.php',
