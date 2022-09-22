@@ -1,6 +1,6 @@
 import React, {Component, useEffect, useState} from 'react';
 import { Modal, Button, Form } from "react-bootstrap";
-import {BotonHeader, SubmitButton} from './maincomponents.js';
+import {BotonHeader, SubmitButton, CloseButton} from './maincomponents.js';
 //import "bootstrap/dist/css/bootstrap.css";
 
 import './style.css';
@@ -61,13 +61,13 @@ function LogIn (){
       </div>
       <Modal show={show} onHide={handleClose} centered dialogClassName="login-container">
         <Modal.Header>
-          <Modal.Title style={{color: "white"}}>LogIn</Modal.Title>
+		  <CloseButton onClick={handleClose}/>
+          <Modal.Title style={{color: "white"}}>Login</Modal.Title>
         </Modal.Header>
         <Modal.Body>
           <LoginForm onSubmit={onLoginFormSubmit} />
         </Modal.Body>
         <Modal.Footer>
-		  <BotonHeader id="botonMenu2" onClick={handleClose} url="#" name="Cerrar"/>
         </Modal.Footer>
       </Modal>
 	</div>
@@ -143,13 +143,13 @@ function SignUp (){
       </div>
       <Modal show={show} onHide={handleClose} centered dialogClassName="login-container" size="xl">
         <Modal.Header>
-          <Modal.Title style={{color: "white"}}>Sign Up</Modal.Title>
+     	  <CloseButton onClick={handleClose}/>
+          <Modal.Title style={{color: "white"}}>Sign up</Modal.Title>
         </Modal.Header>
         <Modal.Body>
           <SignUpForm onSubmit={onSignUpFormSubmit} />
         </Modal.Body>
         <Modal.Footer>
-		  <BotonHeader c="close cancelbtn" id="botonMenu2" onClick={handleClose} url="#" name="Cerrar"/>
         </Modal.Footer>
       </Modal>
 	</div>
