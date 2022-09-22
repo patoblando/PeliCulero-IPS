@@ -68,7 +68,7 @@ function LogIn (){
       >
 		<BotonHeader id="botonMenu2" onClick={handleShow} url="#" name="LogIn"/>
       </div>
-      <Modal show={show} onHide={handleClose} centered dialogClassName="login-container">
+      <Modal show={show} onHide={handleClose} centered dialogClassName="login-container animate">
         <Modal.Header>
 		  <CloseButton onClick={handleClose}/>
           <Modal.Title style={{color: "white", marginTop: "2%", marginBottom: "2%"}}>Login</Modal.Title>
@@ -148,7 +148,7 @@ function SignUp (){
       >
 		<BotonHeader id="botonMenu2" onClick={handleShow} url="#" name="Sign Up"/>
       </div>
-      <Modal show={show} onHide={handleClose} centered dialogClassName="login-container" size="xl">
+      <Modal show={show} onHide={handleClose} centered dialogClassName="login-container animate" size="xl">
         <Modal.Header>
      	  <CloseButton onClick={handleClose}/>
           <Modal.Title style={{color: "white"}}>Sign up</Modal.Title>
