@@ -115,7 +115,7 @@ p, a{
 .inSlider {
   width: 80%;
   padding: 0;
-  background-image: url(../img/fondoEstrellado.webp);
+  background-image: url(../img/fondoEstrellado5.webp);
   backdrop-filter: blur(100px);
   backdrop-filter: saturate(180%) blur(2rem);
 
