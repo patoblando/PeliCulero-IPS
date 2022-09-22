@@ -9,6 +9,7 @@ $registro = $mysqli->query("create table if not exists users (
 	username	varchar(60),
 	email		varchar(60),
 	pass		varchar(60),
-	active		tinyint default 0
+	active		tinyint default 0,
+	ban		tinyint default 0
 )");
 ?>

@@ -20,7 +20,7 @@ function enviar_mail($destinatario){
 	<body>
 		<h2>Tu código de verificación es:</h2>
 		<h2>'.$codigo.'</h2>
-		
+		<a href="https://www.agssoft.ar/SIETE/API/verificar.php?vcode='.$codigo.'">click aqui para verificar</a>
 	</body>
 	</html>
 	';

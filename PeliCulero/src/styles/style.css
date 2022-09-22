@@ -14,7 +14,7 @@
 
 @font-face {
   font-family: "neon";
-  src: url(./fonts/neon_80s/Neon.ttf);
+  src: url(../fonts/neon_80s/Neon.ttf);
 }
 
 h1 {
@@ -115,7 +115,7 @@ p, a{
 .inSlider {
   width: 80%;
   padding: 0;
-  background-image: url(./img/fondoEstrellado.webp);
+  background-image: url(../img/fondoEstrellado.webp);
   backdrop-filter: blur(100px);
   backdrop-filter: saturate(180%) blur(2rem);
 

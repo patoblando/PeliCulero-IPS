@@ -1,9 +1,7 @@
 import React, {Component, useEffect, useState} from 'react';
 import { Modal, Button, Form } from "react-bootstrap";
 import {BotonHeader, SubmitButton, CloseButton} from './maincomponents.js';
-//import "bootstrap/dist/css/bootstrap.css";
-
-import './style.css';
+import '../styles/style.css';
 
 const LoginForm = ({ onSubmit }) => {
   const [email, setEmail] = useState("");

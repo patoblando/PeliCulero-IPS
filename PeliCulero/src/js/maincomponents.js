@@ -1,4 +1,4 @@
-import './style.css';
+import '../styles/style.css';
 import './main.js';
 import {LogIn,SignUp} from './sesion.js';
 
@@ -36,7 +36,7 @@ function Logo () {
 	return (
 		<div id="marca">
 			<a id="logoa" target="_self" href="#">
-				<img id="logo" src={require('./img/logo.png')}/>
+				<img id="logo" src={require('../img/logo.png')}/>
 			</a>
 		</div>
 	);
@@ -90,7 +90,7 @@ function Footer (){
 		<footer>
 			<section className="top-footer">
 				<section id="img-footer">
-					<img src={require("./img/peliculero-circulo-blanco.png")} alt=""/>
+					<img src={require("../img/peliculero-circulo-blanco.png")} alt=""/>
 				</section>
 				<section>
 					<h3>Sobre nosotros</h3>
