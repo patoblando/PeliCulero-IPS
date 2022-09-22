@@ -317,6 +317,7 @@ input[type=text], input[type=password], input[type=button], input[type=email], i
   border-radius: 10px;
   margin: auto;
   margin-bottom: 50px;
+  margin-top: 2%;
   box-shadow: var(--footer-shadow);
   outline: 1px solid rgb(58, 1, 85);
   transition: 1s all cubic-bezier(0.165, 0.84, 0.44, 1);
@@ -394,7 +395,7 @@ label{
 
 .login-container {
   padding: 16px;
-  width: 60%;
+  width: 100%;
   margin: auto;
   display: flex;
   flex-direction: column;

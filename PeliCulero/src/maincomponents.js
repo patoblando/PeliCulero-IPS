@@ -45,7 +45,7 @@ function Logo () {
 function SubmitButton({name}){
 	return (
 	<div class="login-signup">
-		<button type="submit" class="login-button login-btn w3-round-large boton-nav" id="registro_enviar">{name}</button>
+		<button type="submit" class="login-button login-btn w3-round-large boton-nav" style={{marginTop: "3%"}} id="registro_enviar">{name}</button>
 	</div>
 	);
 }

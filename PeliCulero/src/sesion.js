@@ -8,10 +8,17 @@ import './style.css';
 const LoginForm = ({ onSubmit }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  
+  const remembermestyle = {
+      paddingTop: "10%",
+	  justifyContent: "space-between",
+	  display: "flex",
+	  flexDirection: "row !important"
+	};
+
   return (
 	<div className="login-container">
-    <Form onSubmit={onSubmit} dialogClassName="login-container">
+	<div style={{marginLeft: "20%", marginRight: "20%"}}>
+    <Form onSubmit={onSubmit} >
       <Form.Group controlId="formBasicEmail">
         <Form.Label style={{color: "white"}}>Email address</Form.Label>
         <Form.Control
@@ -32,10 +39,12 @@ const LoginForm = ({ onSubmit }) => {
         />
       </Form.Group>
 	  <SubmitButton name="Enviar"/>
-      <Form.Group controlId="formBasicCheckbox">
-        <Form.Check style={{color: "white"}} type="checkbox" label="Remember Me!" />
+      <Form.Group style={remembermestyle} controlId="formBasicCheckbox">
+        <Form.Check style={{color: "white"}} checked="checked" type="checkbox" label=" Remember Me" />
+		<a href="#">¿Olvidaste tu contraseña?</a>
       </Form.Group>
     </Form>
+	</div>
 	</div>
   );
 };
@@ -62,7 +71,7 @@ function LogIn (){
       <Modal show={show} onHide={handleClose} centered dialogClassName="login-container">
         <Modal.Header>
 		  <CloseButton onClick={handleClose}/>
-          <Modal.Title style={{color: "white"}}>Login</Modal.Title>
+          <Modal.Title style={{color: "white", marginTop: "2%", marginBottom: "2%"}}>Login</Modal.Title>
         </Modal.Header>
         <Modal.Body>
           <LoginForm onSubmit={onLoginFormSubmit} />
@@ -79,9 +88,10 @@ const SignUpForm = ({ onSubmit }) => {
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  
+	
   return (
-  	<div className="login-container">
+  	<div className="login-container" >
+	<div style={{marginLeft: "20%", marginRight: "20%", marginBottom: "4%"}}>
     <Form onSubmit={onSubmit} dialogClassName="login-container">
       <Form.Group controlId="formBasicUsername">
         <Form.Label style={{color: "white"}}>Username</Form.Label>
@@ -113,11 +123,8 @@ const SignUpForm = ({ onSubmit }) => {
         />
       </Form.Group>
 	  <SubmitButton name="Enviar"/>
-
-      <Form.Group controlId="formBasicCheckbox">
-        <Form.Check style={{color: "white"}} type="checkbox" label="Remember Me!" />
-      </Form.Group>
     </Form>
+	</div>
 	</div>
   );
 };
