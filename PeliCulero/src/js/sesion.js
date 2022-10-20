@@ -1,7 +1,7 @@
 import React, {Component, useEffect, useState} from 'react';
 import { Modal, Button, Form } from "react-bootstrap";
-import {BotonHeader, SubmitButton, CloseButton} from './maincomponents.js';
-import '../styles/style.css';
+import {BotonHeader} from './maincomponents.js';
+import { SubmitButton, CloseButton } from './FormComponents.js';
 
 const LoginForm = ({ onSubmit }) => {
   const [email, setEmail] = useState("");
@@ -144,18 +144,19 @@ function SignUp (){
       <div
         className="d-flex align-items-center justify-content-center"
       >
-		<BotonHeader id="botonMenu2" onClick={handleShow} url="#" name="Sign Up"/>
+		      <BotonHeader id="botonMenu2" onClick={handleShow} url="#" name="Sign Up"/>
       </div>
       <Modal show={show} onHide={handleClose} centered dialogClassName="login-container animate" size="xl">
-        <Modal.Header>
-     	  <CloseButton onClick={handleClose}/>
-          <Modal.Title style={{color: "white"}}>Sign up</Modal.Title>
-        </Modal.Header>
-        <Modal.Body>
-          <SignUpForm onSubmit={onSignUpFormSubmit} />
-        </Modal.Body>
-        <Modal.Footer>
-        </Modal.Footer>
+          <Modal.Header>
+              <CloseButton onClick={handleClose}/>
+              <Modal.Title style={{color: "white"}}>
+                  Sign up
+              </Modal.Title>
+          </Modal.Header>
+
+          <Modal.Body>
+              <SignUpForm onSubmit={onSignUpFormSubmit} />
+          </Modal.Body>
       </Modal>
 	</div>
   );

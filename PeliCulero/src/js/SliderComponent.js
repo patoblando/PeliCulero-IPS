@@ -52,4 +52,5 @@ const Slider = ({deviceType}) => {
 	);
 	
 };
-export default Slider;
+
+export { Slider };
