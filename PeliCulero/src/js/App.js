@@ -1,9 +1,8 @@
 import React, {Component, useEffect, useState} from 'react';
-import {BotonAleatorio, BotonHeader, TarjetaPelicula} from './maincomponents.js';
-import { Footer } from './FooterComponent.js';
-import { Header } from './HeaderComponent.js';
-import { Slider } from './SliderComponent.js';
-import {LogIn,SignUp} from './sesion.js';
+import {BotonAleatorio, BotonHeader, TarjetaPelicula} from '../components/MainComponents.js';
+import { Footer } from '../components/FooterComponent.js';
+import { Header } from '../components/HeaderComponent.js';
+import { Slider } from '../components/SliderComponent.js';
 
 function App() {
 

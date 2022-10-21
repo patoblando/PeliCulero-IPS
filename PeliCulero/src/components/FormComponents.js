@@ -8,7 +8,7 @@ function SubmitButton({name}){
 
 function CloseButton(props){
 	return (
-		<div style={{position:"relative"}} onClick={props.onClick}>
+		<div onClick={props.onClick}>
 				<span class="close" title="Close Modal">&times;</span>
 		</div>
 	);

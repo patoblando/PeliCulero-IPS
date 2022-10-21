@@ -1,4 +1,4 @@
-import {LogIn,SignUp} from './sesion.js';
+import {LogIn,SignUp} from '../js/sesion.js';
 
 function Header (){
 	return (

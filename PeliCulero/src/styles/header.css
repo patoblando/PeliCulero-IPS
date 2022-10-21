@@ -1,0 +1,59 @@
+header{
+	display: flex;
+	width: 80%;
+  margin: auto;
+  margin-bottom: 30px;
+	/* background-color: black; */
+  flex-direction:row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav{
+  margin: 0;
+  padding: 0;
+}
+
+nav ul{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.boton-nav{
+  transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 1s;
+  margin-left: 20px;
+}
+
+#botonMenu1:hover{
+    background-color:var(--violeta-medio)!important;
+    color: var(--lila) !important;
+}
+  
+#botonMenu2:hover{
+    background-color:var(--violeta-claro)!important;
+    color: var(--lila) !important;
+}
+
+#marca {
+	width: 15%;
+}
+
+#logo{
+	width: 100%;
+}
+ 
+#logoa{
+	margin: 2%;
+}
+
+li {
+  display: inline-flex;
+}
+
+li a {
+  display: block;
+  color: var(--lila);
+  text-decoration: none;
+}

@@ -1,5 +1,4 @@
 import Carousel from "react-multi-carousel";
-import {TarjetaPelicula} from './maincomponents.js';
 import "react-multi-carousel/lib/styles.css";
 
 const responsive = {
@@ -21,6 +20,17 @@ const responsive = {
     items: 1
   }
 };
+
+
+function TarjetaPelicula(props) {
+	return (
+		<div className = "w3-card-4 w3-round-large w3-button w3-border boton inSlider" onClick="peliculaGenero({props.name})">
+			<a target="_blank">
+			<p>{props.name}</p>
+			</a>
+		</div>
+	);
+  }
 
 
 const Slider = ({deviceType}) => {
@@ -53,4 +63,4 @@ const Slider = ({deviceType}) => {
 	
 };
 
-export { Slider };
+export { Slider, TarjetaPelicula };

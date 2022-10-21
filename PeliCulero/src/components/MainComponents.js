@@ -1,17 +1,3 @@
-import '../styles/style.css';
-import './main.js';
-
-
-function TarjetaPelicula(props) {
-	return (
-		<div className = "w3-card-4 w3-round-large w3-button w3-border boton inSlider" onClick="peliculaGenero({props.name})">
-			<a target="_blank">
-			<p>{props.name}</p>
-			</a>
-		</div>
-	);
-  }
-
 function BotonAleatorio(){
 	return (
 		<section className = "contenedor centrar separacionvertical">
@@ -32,7 +18,5 @@ function BotonHeader(props){
 	);
 }
 
-
-
-export {BotonAleatorio, BotonHeader, TarjetaPelicula};
+export {BotonAleatorio, BotonHeader };
 
