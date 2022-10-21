@@ -1,4 +1,4 @@
-	
+	/*
 	$(document).ready(function () {
 		
 		$(".registrarse").click(function() {
@@ -60,5 +60,9 @@
 			banForm.style.display = "none";
 		}		
 	}
+<<<<<<< HEAD:PeliCulero/js/main.js
 
+=======
+	*/
+>>>>>>> mergetoreact:PeliCulero/src/js/main.js
 	

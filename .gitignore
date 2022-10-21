@@ -1,2 +1,7 @@
 variables.inc
+=======
+src/variables.inc
+variables.inc
+node_modules/
+>>>>>>> mergetoreact
 .vscode
